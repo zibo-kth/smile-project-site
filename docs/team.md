@@ -12,9 +12,11 @@ Links: [KTH profile](https://www.kth.se/profile/zibo?l=en) • [Google Scholar](
 
 ## Participating researchers
 
-- **Karl Bolin** — KTH
-- **Jian Kang** — University College London (UCL)
-- **Tin Oberman** — University College London (UCL)
-- **Romain Rumpler** — KTH
+- **Karl Bolin** (Associate Professor) — KTH • [Profile](https://www.kth.se/profile/kbolin)
+- **Jian Kang** (Professor) — University College London (UCL) • [Profile](https://profiles.ucl.ac.uk/66211-jian-kang)
+- **Tin Oberman** (Dr) — University College London (UCL) • [Profile](https://profiles.ucl.ac.uk/66923-tin-oberman)
+- **Romain Rumpler** (Associate Professor) — KTH • [Profile](https://www.kth.se/profile/rumpler)
 
-*(Roles and short bios will be added once confirmed for the public website.)*
+## Researchers
+
+- **Xiang Fang** (PhD student, UCL) — Key researcher for SMILE • [Profile](https://profiles.ucl.ac.uk/92764-xiang-fang)
