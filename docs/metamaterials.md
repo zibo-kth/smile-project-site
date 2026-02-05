@@ -50,12 +50,14 @@ Because metamaterial behavior depends on complex geometry, we typically cannot �
 
 ## Selected references (with links)
 
-- Cummer, S. A., Christensen, J., & Alù, A. (2016). *Controlling sound with acoustic metamaterials.* **Nature Reviews Materials**, 1, 16001. DOI: https://doi.org/10.1038/natrevmats.2016.1  
-  Author PDF (link): https://people.ee.duke.edu/~cummer/reprints/188_Cummer16_NatRevMat_AcousticMetamaterials.pdf
+- Cummer, S. A., Christensen, J., & Alù, A. (2016). *Controlling sound with acoustic metamaterials.* **Nature Reviews Materials**, 1, 16001.  
+  Links: [DOI](https://doi.org/10.1038/natrevmats.2016.1) • [Author PDF](https://people.ee.duke.edu/~cummer/reprints/188_Cummer16_NatRevMat_AcousticMetamaterials.pdf)
 
-- Review (open access via PubMed Central): *Underwater acoustic metamaterials.* (Review article). https://pmc.ncbi.nlm.nih.gov/articles/PMC10171648/
+- Review (open access via PubMed Central): *Underwater acoustic metamaterials.* (Review article).  
+  Link: [PMC article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10171648/)
 
-- Example of reconfigurable labyrinthine (space-coiling) metamaterial (Nature Portfolio page): *A magnetically actuated dynamic labyrinthine transmissive ultrasonic metamaterial.* https://www.nature.com/articles/s43246-023-00438-4
+- Example of reconfigurable labyrinthine (space-coiling) metamaterial (Nature Portfolio page): *A magnetically actuated dynamic labyrinthine transmissive ultrasonic metamaterial.*  
+  Link: [Nature page](https://www.nature.com/articles/s43246-023-00438-4)
 
 ## Image & attribution
 
