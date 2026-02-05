@@ -4,6 +4,9 @@
 
 **SMILE-乐景工程**
 
+**SMILE (Swedish):** *Ljudlandskapsutformning med Metamaterialinnovation och Lärande*  
+KTH funding announcement: https://www.kth.se/om/nyheter/centrala-nyheter/kth-forskare-far-155-miljoner-av-vetenskapsradet-1.1437168
+
 **SMILE: Soundscape engineering with Metamaterial Innovation and LEarning** is a Swedish Research Council (VR) research project (2026–2029).
 
 We develop an **integrated engineering framework** that combines:
