@@ -61,6 +61,4 @@ Because metamaterial behavior depends on complex geometry, we typically cannot �
 
 ## Image & attribution
 
-- The figure on this page is a **concept sketch created for the SMILE website** (SVG). It is not copied from a paper.
-
-If you want, we can also add a “Gallery” section that links to specific **open-access** figures from selected papers, with careful attribution and licensing notes.
+- The figures on this page are **concept sketches created for the SMILE website**. They are not copied from papers.
