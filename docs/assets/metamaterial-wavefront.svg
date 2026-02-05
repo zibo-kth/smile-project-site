@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#0b3d2e"/>
+    </linearGradient>
+    <linearGradient id="mm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#74c0fc" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#38d9a9" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="520" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#ffffff">
+    <text x="50" y="60" font-size="28" font-weight="700">How acoustic metamaterials reshape a sound field</text>
+    <text x="50" y="92" font-size="16" opacity="0.85">Concept sketch (not a photo): a designed metamaterial/metasurface changes phase & amplitude to steer and soften sound.</text>
+  </g>
+
+  <!-- incident waves (left) -->
+  <g stroke="#e7f5ff" stroke-width="3" fill="none" opacity="0.55">
+    <path d="M30 160 C 120 110, 210 210, 300 160"/>
+    <path d="M30 200 C 120 150, 210 250, 300 200"/>
+    <path d="M30 240 C 120 190, 210 290, 300 240"/>
+    <path d="M30 280 C 120 230, 210 330, 300 280"/>
+    <path d="M30 320 C 120 270, 210 370, 300 320"/>
+  </g>
+
+  <!-- metamaterial slab -->
+  <g>
+    <rect x="360" y="140" width="220" height="260" rx="22" fill="url(#mm)" opacity="0.25" stroke="#c3fae8" stroke-opacity="0.35"/>
+    <!-- labyrinth / unit-cell hint -->
+    <g stroke="#c3fae8" stroke-width="4" fill="none" opacity="0.65" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M395 175 h150 v55 h-110 v50 h110 v55 h-150"/>
+      <path d="M395 215 h110" opacity="0.5"/>
+      <path d="M435 285 h110" opacity="0.5"/>
+      <path d="M395 335 h110" opacity="0.5"/>
+    </g>
+    <g font-family="ui-sans-serif, system-ui" fill="#ffffff" opacity="0.9">
+      <text x="378" y="430" font-size="14">Designed metamaterial / metasurface</text>
+      <text x="378" y="450" font-size="12" opacity="0.75">(geometry encodes phase delay + impedance)</text>
+    </g>
+  </g>
+
+  <!-- outgoing waves (right) -->
+  <g stroke="#e6fcf5" stroke-width="3" fill="none" opacity="0.7">
+    <path d="M600 170 C 720 110, 840 120, 980 150 C 1060 168, 1120 188, 1170 210"/>
+    <path d="M600 215 C 720 155, 850 160, 990 195 C 1070 214, 1125 236, 1170 260"/>
+    <path d="M600 260 C 725 215, 860 220, 1005 250 C 1080 270, 1130 292, 1170 315"/>
+    <path d="M600 305 C 725 275, 870 285, 1020 310 C 1090 326, 1135 345, 1170 365"/>
+    <path d="M600 350 C 725 330, 880 345, 1035 370 C 1100 384, 1140 402, 1170 418"/>
+  </g>
+
+  <!-- callouts -->
+  <g font-family="ui-sans-serif, system-ui" fill="#ffffff" opacity="0.9">
+    <text x="70" y="132" font-size="14">Incoming sound</text>
+    <text x="630" y="132" font-size="14">Shaped sound field</text>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui" fill="#ffffff" opacity="0.85">
+    <text x="640" y="448" font-size="14">Potential outcomes:</text>
+    <text x="640" y="472" font-size="13" opacity="0.8">• steer reflections away • reduce annoyance • create pleasant masking textures</text>
+    <text x="640" y="492" font-size="13" opacity="0.8">• improve cabin/room comfort • quieter parks near traffic</text>
+  </g>
+</svg>
