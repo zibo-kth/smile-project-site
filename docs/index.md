@@ -1,5 +1,7 @@
 # SMILE
 
+![SMILE hero](assets/smile-hero.svg){ width="100%" }
+
 **SMILE: Soundscape engineering with Metamaterial Innovation and LEarning** is a Swedish Research Council (VR) research project (2026–2029).
 
 We develop an **integrated engineering framework** that combines:

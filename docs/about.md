@@ -13,6 +13,8 @@ Rather than optimizing only for **sound pressure level** (dB), we consider what 
 3. **Validate perceptual outcomes** using virtual reality (VR) soundscape evaluation and public participation.
 4. Iterate to create a **closed loop**: perception → target → design → prototype → perception.
 
+![SMILE icons](assets/smile-icons.svg){ width="100%" }
+
 ## Scope
 
 The project bridges:
