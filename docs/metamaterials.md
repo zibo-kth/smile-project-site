@@ -2,7 +2,7 @@
 
 Acoustic metamaterials are **engineered structures** whose geometry—not just their base material—controls how sound propagates. By designing subwavelength “unit cells” (e.g., resonators, membranes, labyrinthine channels, metasurfaces), we can create effective properties and boundary behaviors that are difficult or impossible to achieve with conventional materials.
 
-![Metamaterial wavefront concept](/assets/metamaterial-wavefront.svg){ width="100%" }
+![Metamaterial wavefront concept](/assets/metamaterial-wavefront.png){ width="100%" }
 
 ## What can they do?
 
@@ -34,11 +34,11 @@ This is crucial for both:
 
 ### Indoor: truck cabin
 
-![Indoor truck cabin concept](/assets/indoor-truck-cabin-concept.svg){ width="100%" }
+![Indoor truck cabin concept](/assets/indoor-truck-cabin-concept.png){ width="100%" }
 
 ### Outdoor: Luma Park (Stockholm)
 
-![Outdoor Luma Park concept](/assets/outdoor-luma-park-concept.svg){ width="100%" }
+![Outdoor Luma Park concept](/assets/outdoor-luma-park-concept.png){ width="100%" }
 
 ## Inverse design (ML) + physics
 
