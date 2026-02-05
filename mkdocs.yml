@@ -1,0 +1,44 @@
+site_name: SMILE Project
+site_description: SMILE — Soundscape engineering with Metamaterial Innovation and LEarning
+site_url: https://smile.se/
+repo_name: zibo-kth/smile-project-site
+repo_url: https://github.com/zibo-kth/smile-project-site
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - About / Vision: about.md
+  - Work Packages: work-packages.md
+  - Results: results.md
+  - News: news.md
+  - Team: team.md
+  - Funding: funding.md
+  - Contact: contact.md
