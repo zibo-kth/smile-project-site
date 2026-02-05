@@ -6,6 +6,10 @@
 
 - **Zibo Liu** — Project leader (KTH Royal Institute of Technology); also an engineer at Scania
 
+Zibo Liu leads the SMILE project at KTH. His research focuses on physical acoustics, acoustic metamaterials, and human-centered soundscape engineering, bridging modeling, inverse design, and perceptual validation.
+
+Links: KTH profile (to be added) • Google Scholar (to be added) • ORCID (to be added)
+
 ## Participating researchers
 
 - **Karl Bolin** — KTH
