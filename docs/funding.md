@@ -8,20 +8,20 @@ SMILE is funded by the **Swedish Research Council (Vetenskapsrådet, VR)** under
 
 <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin: 12px 0 18px 0;">
   <a href="https://www.vr.se/" target="_blank" rel="noopener">
-    <img src="/assets/logos/vr.svg" alt="VR (Swedish Research Council)" style="height:80px;" />
+    <img src="/assets/logos/vr.jpg" alt="VR (Swedish Research Council)" style="height:70px; background:#fff; padding:10px; border-radius:12px;" />
   </a>
   <a href="https://www.kth.se/en" target="_blank" rel="noopener">
-    <img src="/assets/logos/kth.svg" alt="KTH" style="height:80px;" />
+    <img src="/assets/logos/kth.jpg" alt="KTH" style="height:90px; background:#fff; padding:10px; border-radius:12px;" />
   </a>
   <a href="https://www.ucl.ac.uk/" target="_blank" rel="noopener">
-    <img src="/assets/logos/ucl.svg" alt="UCL" style="height:80px;" />
+    <img src="/assets/logos/ucl.jpg" alt="UCL" style="height:70px; background:#111; padding:10px; border-radius:12px;" />
   </a>
   <a href="https://www.scania.com/" target="_blank" rel="noopener">
-    <img src="/assets/logos/scania.svg" alt="Scania" style="height:80px;" />
+    <img src="/assets/logos/scania.jpg" alt="Scania" style="height:90px; background:#fff; padding:10px; border-radius:12px;" />
   </a>
 </div>
 
-*Note: these are temporary wordmark-style placeholders created for the SMILE site. We can replace them with official brand assets once approved.*
+<small>Logos are used with permission for SMILE dissemination.</small>
 
 ## Partners
 
