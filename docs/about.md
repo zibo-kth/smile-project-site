@@ -15,6 +15,10 @@ Rather than optimizing only for **sound pressure level** (dB), we consider what 
 
 ![SMILE icons](/assets/smile-icons.png){ width="100%" }
 
+## Perceptually-driven inverse design loop
+
+![SMILE inverse design loop](/assets/smile-inverse-loop.png){ width="100%" }
+
 ## Scope
 
 The project bridges:
