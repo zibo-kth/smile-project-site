@@ -2,7 +2,7 @@
 
 ## Principal Investigator
 
-- **Zibo Liu** — Project leader (KTH Royal Institute of Technology); also an engineer at Scania CV AB
+- **Zibo Liu** — Project leader (KTH Royal Institute of Technology); also an engineer at Scania
 
 ## Participating researchers
 

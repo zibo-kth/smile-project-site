@@ -8,6 +8,6 @@ SMILE is funded by the **Swedish Research Council (Vetenskapsrådet, VR)** under
 
 - KTH Royal Institute of Technology (administrating organisation)
 - University College London (UCL)
-- Scania CV AB
+- Scania
 
 Logos will be added when we have the approved versions for public use.
