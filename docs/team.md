@@ -8,7 +8,7 @@
 
 Zibo Liu leads the SMILE project at KTH. His research focuses on physical acoustics, acoustic metamaterials, and human-centered soundscape engineering, bridging modeling, inverse design, and perceptual validation.
 
-Links: KTH profile (to be added) • Google Scholar (to be added) • ORCID (to be added)
+Links: [KTH profile](https://www.kth.se/profile/zibo?l=en) • [Google Scholar](https://scholar.google.com/citations?user=OZhmCYwAAAAJ&hl=en) • [ORCID](https://orcid.org/0000-0002-7547-6535)
 
 ## Participating researchers
 
