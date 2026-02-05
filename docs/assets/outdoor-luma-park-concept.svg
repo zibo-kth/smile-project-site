@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a12"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f9e44" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2b8a3e" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#343a40"/>
+      <stop offset="1" stop-color="#212529"/>
+    </linearGradient>
+    <linearGradient id="mm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#74c0fc"/>
+      <stop offset="1" stop-color="#38d9a9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="520" fill="url(#bg)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#ffffff">
+    <text x="50" y="60" font-size="28" font-weight="700">Outdoor example: Luma Park (Stockholm) under traffic noise</text>
+    <text x="50" y="92" font-size="16" opacity="0.85">Concept sketch: shaping sound propagation to improve park soundscape while supporting sustainable urban life.</text>
+  </g>
+
+  <!-- road -->
+  <rect x="60" y="360" width="520" height="90" rx="18" fill="url(#road)" opacity="0.9"/>
+  <g stroke="#ced4da" stroke-width="4" opacity="0.55">
+    <path d="M90 405 H560" stroke-dasharray="18 14"/>
+  </g>
+
+  <!-- simple cars -->
+  <g fill="#adb5bd" opacity="0.85">
+    <rect x="130" y="380" width="90" height="34" rx="10"/>
+    <rect x="270" y="392" width="110" height="26" rx="10"/>
+    <rect x="430" y="382" width="100" height="32" rx="10"/>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui" fill="#ffffff" opacity="0.75">
+    <text x="70" y="350" font-size="13">Road traffic</text>
+  </g>
+
+  <!-- noise rays into park -->
+  <g stroke="#ffd43b" stroke-width="3" fill="none" opacity="0.55">
+    <path d="M580 380 C 680 330, 760 280, 860 250"/>
+    <path d="M580 405 C 690 370, 780 320, 900 300"/>
+    <path d="M580 430 C 700 410, 810 380, 950 370"/>
+  </g>
+
+  <!-- park area -->
+  <path d="M620 450 C 820 320, 980 320, 1140 410 L1140 520 L620 520 Z" fill="url(#grass)"/>
+
+  <!-- trees -->
+  <g opacity="0.9">
+    <g transform="translate(760,320)">
+      <rect x="-6" y="80" width="12" height="60" fill="#c0a080" opacity="0.7"/>
+      <circle cx="0" cy="60" r="34" fill="#69db7c" opacity="0.35"/>
+    </g>
+    <g transform="translate(930,320)">
+      <rect x="-6" y="80" width="12" height="60" fill="#c0a080" opacity="0.7"/>
+      <circle cx="0" cy="60" r="34" fill="#69db7c" opacity="0.35"/>
+    </g>
+    <g transform="translate(1040,345)">
+      <rect x="-6" y="80" width="12" height="60" fill="#c0a080" opacity="0.7"/>
+      <circle cx="0" cy="60" r="30" fill="#69db7c" opacity="0.35"/>
+    </g>
+  </g>
+
+  <!-- metamaterial intervention near road -->
+  <g>
+    <rect x="600" y="250" width="36" height="200" rx="12" fill="url(#mm)" opacity="0.35" stroke="#c3fae8" stroke-opacity="0.35"/>
+    <g stroke="#c3fae8" stroke-width="4" opacity="0.65" fill="none" stroke-linecap="round">
+      <path d="M610 280 h16"/>
+      <path d="M610 310 h16"/>
+      <path d="M610 340 h16"/>
+      <path d="M610 370 h16"/>
+      <path d="M610 400 h16"/>
+    </g>
+    <g font-family="ui-sans-serif, system-ui" fill="#ffffff" opacity="0.9">
+      <text x="650" y="275" font-size="14">Designable metamaterial barrier / interface</text>
+      <text x="650" y="297" font-size="12" opacity="0.75">(steer, absorb, and reshape traffic noise)</text>
+    </g>
+  </g>
+
+  <!-- improved soundscape region -->
+  <g opacity="0.8">
+    <path d="M690 450 C 850 360, 1010 360, 1120 420" fill="#0ca678" opacity="0.18"/>
+    <path d="M700 442 C 850 370, 1000 370, 1110 420" stroke="#38d9a9" stroke-width="3" fill="none" opacity="0.35"/>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui" fill="#ffffff" opacity="0.9">
+    <text x="740" y="250" font-size="14">Target outcome: quieter & more pleasant park soundscape</text>
+    <text x="740" y="272" font-size="12" opacity="0.75">less annoyance • more comfort • healthier urban life</text>
+  </g>
+
+  <!-- note -->
+  <g font-family="ui-sans-serif, system-ui" fill="#ffffff" opacity="0.7">
+    <text x="50" y="495" font-size="12">Illustration is conceptual; the site-specific design will be developed with physics + ML inverse design + human validation.</text>
+  </g>
+</svg>

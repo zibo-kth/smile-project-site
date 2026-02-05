@@ -30,6 +30,16 @@ This is crucial for both:
 - **Indoor** contexts (e.g., cabins/rooms): reduce fatigue and improve comfort.
 - **Outdoor** contexts (e.g., parks near traffic): create healthier, more pleasant urban environments.
 
+## Indoor & outdoor examples (concept sketches)
+
+### Indoor: truck cabin
+
+![Indoor truck cabin concept](/assets/indoor-truck-cabin-concept.svg){ width="100%" }
+
+### Outdoor: Luma Park (Stockholm)
+
+![Outdoor Luma Park concept](/assets/outdoor-luma-park-concept.svg){ width="100%" }
+
 ## Inverse design (ML) + physics
 
 Because metamaterial behavior depends on complex geometry, we typically cannot “hand-design” the best solution. SMILE therefore combines:
