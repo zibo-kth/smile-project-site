@@ -4,8 +4,6 @@ SMILE is funded by the **Swedish Research Council (Vetenskapsrådet, VR)** under
 
 - **Project period:** 2026‑01‑01 to 2029‑12‑31
 
-## Logos
-
 <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin: 12px 0 18px 0;">
   <a href="https://www.vr.se/" target="_blank" rel="noopener">
     <img src="/assets/logos/vr.jpg" alt="VR (Swedish Research Council)" style="height:70px; background:#fff; padding:10px; border-radius:12px;" />
@@ -21,7 +19,7 @@ SMILE is funded by the **Swedish Research Council (Vetenskapsrådet, VR)** under
   </a>
 </div>
 
-<small>Logos are used with permission for SMILE dissemination.</small>
+<small>Used with permission for SMILE dissemination.</small>
 
 ## Partners
 
