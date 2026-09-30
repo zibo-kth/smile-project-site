@@ -1,23 +1,46 @@
-site_name: SMILE Project
-site_description: SMILE — Soundscape engineering with Metamaterial Innovation and LEarning
+site_name: SMILE
+site_description: Soundscape engineering with metamaterial innovation and learning
 site_url: https://smile-acoustics.se/
-repo_name: zibo-kth/smile-project-site
-repo_url: https://github.com/zibo-kth/smile-project-site
-edit_uri: edit/main/docs/
 
 theme:
   name: material
   language: en
+  custom_dir: overrides
+  font: false
+  logo: assets/smile-mark.svg
+  favicon: assets/smile-mark.svg
   features:
     - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.indexes
+    - navigation.footer
     - navigation.top
-    - content.action.edit
-    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.follow
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/zibo-kth/smile-project-site
+      name: SMILE on GitHub
+    - icon: material/account-school
+      link: https://www.kth.se/profile/zibo?l=en
+      name: Project leader at KTH
+    - icon: material/email-outline
+      link: mailto:zibo@kth.se
+      name: Contact SMILE
+
+copyright: SMILE · Swedish Research Council grant 2025-06253 · KTH Royal Institute of Technology
 
 plugins:
   - search
@@ -35,11 +58,14 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - About / Vision: about.md
-  - Work Packages: work-packages.md
-  - Acoustic Metamaterials: metamaterials.md
-  - Results: results.md
-  - News: news.md
-  - Team: team.md
-  - Funding: funding.md
+  - Research:
+      - Vision: about.md
+      - Technology Roadmap: work-packages.md
+      - Acoustic Metamaterials: metamaterials.md
+  - Outputs:
+      - Publications & Resources: results.md
+      - Updates: news.md
+  - People & Support:
+      - Team: team.md
+      - Funding & Collaboration: funding.md
   - Contact: contact.md

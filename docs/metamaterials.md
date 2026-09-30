@@ -1,64 +1,73 @@
-# Acoustic metamaterials (popular-science)
+# Acoustic metamaterials
 
-Acoustic metamaterials are **engineered structures** whose geometry—not just their base material—controls how sound propagates. By designing subwavelength “unit cells” (e.g., resonators, membranes, labyrinthine channels, metasurfaces), we can create effective properties and boundary behaviors that are difficult or impossible to achieve with conventional materials.
+<p class="page-lead">Acoustic metamaterials are engineered structures whose geometry—together with their constituent materials—creates a tailored response to sound. SMILE studies how that physical response can be connected carefully to context-specific soundscape targets.</p>
 
-![Metamaterial wavefront concept](/assets/metamaterial-wavefront.png){ width="100%" }
+## What makes a metamaterial different?
 
-## What can they do?
+Conventional acoustic treatments often rely on material thickness, bulk mass, or porous dissipation. Metamaterials expand the design space through deliberately structured elements such as resonators, membranes, labyrinthine channels, periodic lattices, and metasurfaces.
 
-Typical capabilities relevant to SMILE include:
+Their geometry can create effective behaviour that is difficult to obtain from a homogeneous material alone. Local resonance, for example, can support strong low-frequency effects in a compact structure, although bandwidth, loss, robustness, and fabrication constraints remain central engineering challenges.
 
-- **Low-frequency control with lightweight designs** (e.g., local resonance instead of mass)
-- **Wavefront shaping**: steering, focusing/defocusing, and reducing problematic reflections
-- **Broadband sound management** via combinations of resonant + non-resonant mechanisms
-- **Reconfigurable or adaptive behavior** (actively tuned structures)
+<div class="science-figure scrollable" tabindex="0" aria-label="Scrollable diagram of acoustic metamaterial mechanisms and measurable outcomes">
+  <img src="../assets/metamaterial-principles.svg" alt="Incident sound interacts with an engineered structure; measurable outcomes include transmission, reflection, absorption, spectral modification, directionality, and uncertainty">
+</div>
 
-In SMILE, we treat metamaterials as a **designable “acoustic interface”** that can be optimized to meet *soundscape targets* (comfort, pleasantness, context-appropriateness), rather than only minimizing dB.
+## Potential capabilities
 
-## Why metamaterials matter for soundscapes
+Depending on the mechanism and application, candidate structures may be designed to influence:
 
-Traditional noise control is often framed as: “reduce sound level.” Soundscape engineering is different: it asks **how a place should sound** for people.
+- **Transmission** — reduce or reshape sound passing through a panel or interface.
+- **Reflection and absorption** — alter how acoustic energy is returned or dissipated.
+- **Spectrum** — target selected frequency ranges or broaden a useful response.
+- **Directionality and scattering** — steer, focus, diffuse, or redistribute sound.
+- **Adaptability** — tune a response after fabrication through mechanical or active control.
 
-Metamaterials expand the design space by letting us shape:
+These are physical capabilities. Whether a change is perceived as more pleasant, comfortable, or appropriate is a separate question that requires participant-based evidence.
 
-- **spectral content** (which frequencies are reduced or transformed)
-- **temporal character** (impulsiveness, roughness, modulation)
-- **spatial perception** (directionality, reflections, acoustic “scene”)
+## Why inverse design?
 
-This is crucial for both:
+Metamaterial behaviour can depend on many coupled choices: geometry, material properties, losses, boundaries, manufacturing tolerances, and operating conditions. This high-dimensional design space motivates computational optimisation.
 
-- **Indoor** contexts (e.g., cabins/rooms): reduce fatigue and improve comfort.
-- **Outdoor** contexts (e.g., parks near traffic): create healthier, more pleasant urban environments.
+SMILE investigates a constrained loop:
 
-## Indoor & outdoor examples (concept sketches)
+1. **Specify a physical target** informed by the intended soundscape and context.
+2. **Predict candidate behaviour** with physics-based models.
+3. **Search efficiently** using optimisation and machine-learning-assisted surrogates where appropriate.
+4. **Filter for feasibility** using robustness, space, mass, manufacturability, and sustainability constraints.
+5. **Prototype and measure** before drawing conclusions about performance.
+6. **Evaluate participant-reported outcomes** when the research question concerns perception.
 
-### Indoor: truck cabin
+Machine learning supports the search; it does not replace wave physics, experimental validation, or human evaluation.
 
-![Indoor truck cabin concept](/assets/indoor-truck-cabin-concept.png){ width="100%" }
+## Illustrative application scenarios
 
-### Outdoor: Luma Park (Stockholm)
+<div class="science-figure scrollable" tabindex="0" aria-label="Scrollable diagram of illustrative indoor and outdoor application pathways">
+  <img src="../assets/application-pathways.svg" alt="Illustrative vehicle-cabin and traffic-exposed public-space pathways from context-specific targets to candidate interventions and evaluation">
+</div>
 
-![Outdoor Luma Park concept](/assets/outdoor-luma-park-concept.png){ width="100%" }
+The scenarios above are used to explain the translation logic. They do not imply that an intervention has already been deployed, or that a specific site or vehicle platform is committed before the relevant evidence and agreements are in place.
 
-## Inverse design (ML) + physics
+## How SMILE judges a candidate
 
-Because metamaterial behavior depends on complex geometry, we typically cannot “hand-design” the best solution. SMILE therefore combines:
+<div class="evidence-grid">
+  <div class="evidence-item physical">
+    <strong>Acoustic performance</strong>
+    Does the structure produce the intended change across the required frequency, angle, and operating range?
+  </div>
+  <div class="evidence-item human">
+    <strong>Perceptual outcome</strong>
+    Is the hypothesised effect supported by participant-reported evidence in the tested context?
+  </div>
+  <div class="evidence-item practical">
+    <strong>Engineering feasibility</strong>
+    Can the structure meet constraints on size, mass, robustness, manufacture, and sustainability?
+  </div>
+</div>
 
-1. **High-fidelity simulation & physical modeling** (wave propagation + structure–acoustics)
-2. **Machine-learning-driven inverse design** (optimization / generative search)
-3. **Perceptual validation** (VR soundscape evaluation + human feedback)
+## Selected references
 
-## Selected references (with links)
+- Cummer, S. A., Christensen, J., and Alù, A. (2016). *Controlling sound with acoustic metamaterials.* **Nature Reviews Materials**, 1, 16001. [DOI](https://doi.org/10.1038/natrevmats.2016.1)
+- Chaplain, G. J., Langfeldt, F., Romero-García, V., et al. (2025). *The 2024 acoustic metamaterials roadmap.* **Journal of Physics D: Applied Physics**, 58, 433001. [DOI](https://doi.org/10.1088/1361-6463/add306)
+- ISO 12913-1:2014. *Acoustics — Soundscape — Part 1: Definition and conceptual framework.* [ISO record](https://www.iso.org/standard/52161.html)
 
-- Cummer, S. A., Christensen, J., & Alù, A. (2016). *Controlling sound with acoustic metamaterials.* **Nature Reviews Materials**, 1, 16001.  
-  Links: [DOI](https://doi.org/10.1038/natrevmats.2016.1) • [Author PDF](https://people.ee.duke.edu/~cummer/reprints/188_Cummer16_NatRevMat_AcousticMetamaterials.pdf)
-
-- Review (open access via PubMed Central): *Underwater acoustic metamaterials.* (Review article).  
-  Link: [PMC article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10171648/)
-
-- Example of reconfigurable labyrinthine (space-coiling) metamaterial (Nature Portfolio page): *A magnetically actuated dynamic labyrinthine transmissive ultrasonic metamaterial.*  
-  Link: [Nature page](https://www.nature.com/articles/s43246-023-00438-4)
-
-## Image & attribution
-
-- The figures on this page are **concept sketches created for the SMILE website**. They are not copied from papers.
+All diagrams on this page were created for the SMILE website. They are explanatory figures, not experimental results.

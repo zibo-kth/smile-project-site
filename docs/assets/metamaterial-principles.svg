@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 610" role="img" aria-labelledby="title desc">
+  <title id="title">How an acoustic metamaterial changes a sound field</title>
+  <desc id="desc">An incident sound field meets an engineered array. Physical measurements quantify reflection, transmission, absorption, spectral change, and directionality before any perceptual effect is evaluated.</desc>
+  <rect x="1" y="1" width="1158" height="608" rx="30" fill="#f7fafc" stroke="#d9e3ec" stroke-width="2"/>
+  <text x="55" y="68" fill="#0b1f33" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Geometry creates a controllable acoustic response</text>
+  <text x="55" y="106" fill="#536476" font-family="Arial, Helvetica, sans-serif" font-size="19">The first evidence layer is physical: what changes in the sound field, and by how much?</text>
+
+  <g transform="translate(55 180)">
+    <text x="0" y="-18" fill="#2459c4" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">INCIDENT SOUND</text>
+    <path d="M0 75c38 0 38-56 76-56s38 112 76 112 38-56 76-56" fill="none" stroke="#2459c4" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 165c38 0 38-56 76-56s38 112 76 112 38-56 76-56" fill="none" stroke="#7fa7db" stroke-width="5" stroke-linecap="round"/>
+    <path d="M235 120h64" stroke="#7890a5" stroke-width="5" stroke-linecap="round"/>
+    <path d="m284 105 20 15-20 15" fill="none" stroke="#7890a5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(365 145)">
+    <rect width="270" height="290" rx="24" fill="#0b1f33"/>
+    <text x="135" y="40" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle">ENGINEERED STRUCTURE</text>
+    <g fill="none" stroke="#77ddd2" stroke-width="7">
+      <rect x="38" y="75" width="50" height="50" rx="10"/>
+      <rect x="110" y="75" width="50" height="50" rx="25"/>
+      <rect x="182" y="75" width="50" height="50" rx="10"/>
+      <rect x="38" y="147" width="50" height="50" rx="25"/>
+      <rect x="110" y="147" width="50" height="50" rx="10"/>
+      <rect x="182" y="147" width="50" height="50" rx="25"/>
+    </g>
+    <path d="M46 238h178" stroke="#f0b44d" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 10"/>
+    <text x="135" y="273" fill="#bcd2e5" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="middle">unit cells · interfaces · resonators</text>
+  </g>
+
+  <path d="M655 290h73" stroke="#7890a5" stroke-width="5" stroke-linecap="round"/>
+  <path d="m713 275 20 15-20 15" fill="none" stroke="#7890a5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(760 147)">
+    <text x="0" y="0" fill="#0d766e" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">MEASURABLE OUTCOMES</text>
+    <rect x="0" y="27" width="340" height="246" rx="22" fill="#e7f6f2" stroke="#8dcac2" stroke-width="2"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="19">
+      <circle cx="35" cy="72" r="8" fill="#0d766e"/><text x="58" y="79" fill="#182635">Transmission loss</text>
+      <circle cx="35" cy="115" r="8" fill="#0d766e"/><text x="58" y="122" fill="#182635">Reflection and absorption</text>
+      <circle cx="35" cy="158" r="8" fill="#0d766e"/><text x="58" y="165" fill="#182635">Spectral modification</text>
+      <circle cx="35" cy="201" r="8" fill="#0d766e"/><text x="58" y="208" fill="#182635">Directionality and scattering</text>
+      <circle cx="35" cy="244" r="8" fill="#0d766e"/><text x="58" y="251" fill="#182635">Uncertainty and robustness</text>
+    </g>
+  </g>
+
+  <rect x="203" y="497" width="754" height="70" rx="18" fill="#fff6e5" stroke="#e7ca8b" stroke-width="2"/>
+  <text x="580" y="526" fill="#0b1f33" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle">Perceptual benefit is a hypothesis until participant studies test it.</text>
+  <text x="580" y="552" fill="#536476" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="middle">SMILE keeps physical performance and human evaluation as distinct evidence layers.</text>
+</svg>

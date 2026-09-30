@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta name="theme-color" content="#0b1f33">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SMILE">
+  <meta property="og:title" content="{{ page.meta.title if page and page.meta and page.meta.title else config.site_name }}">
+  <meta property="og:description" content="{{ page.meta.description if page and page.meta and page.meta.description else config.site_description }}">
+  <meta property="og:url" content="{{ page.canonical_url if page and page.canonical_url else config.site_url }}">
+  <meta name="twitter:card" content="summary">
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const drawerToggle = document.getElementById("__drawer");
+      const drawerLabel = document.querySelector('.md-header__button[for="__drawer"]');
+      const mobileQuery = window.matchMedia("(max-width: 76.2344em)");
+
+      function labelToButton(label) {
+        if (!label) return null;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = label.className;
+        button.dataset.smileMobileControl = "";
+        button.innerHTML = label.innerHTML;
+        label.replaceWith(button);
+        return button;
+      }
+
+      function syncMobileOnlyControl(button, isMobile) {
+        if (!button) return;
+        button.hidden = !isMobile;
+        button.setAttribute("aria-hidden", String(!isMobile));
+        if (isMobile) {
+          button.removeAttribute("inert");
+          button.removeAttribute("tabindex");
+        } else {
+          button.setAttribute("inert", "");
+          button.setAttribute("tabindex", "-1");
+        }
+      }
+
+      const drawerButton = labelToButton(drawerLabel);
+
+      function syncDrawerAccessibility() {
+        const primarySidebar = document.querySelector(".md-sidebar--primary");
+        if (!drawerToggle || !drawerButton) return;
+        const isMobile = mobileQuery.matches;
+        syncMobileOnlyControl(drawerButton, isMobile);
+        if (!isMobile && drawerToggle.checked) drawerToggle.checked = false;
+        const isOpen = isMobile && drawerToggle.checked;
+        drawerButton.setAttribute("aria-expanded", String(isMobile && isOpen));
+        drawerButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+        if (!primarySidebar) return;
+        if (!primarySidebar.id) primarySidebar.id = "primary-navigation";
+        if (isMobile && !isOpen) {
+          primarySidebar.setAttribute("inert", "");
+        } else {
+          primarySidebar.removeAttribute("inert");
+        }
+      }
+
+      if (drawerToggle && drawerButton) {
+        drawerButton.setAttribute("aria-controls", "primary-navigation");
+        drawerButton.addEventListener("click", function () {
+          if (!mobileQuery.matches) return;
+          drawerToggle.checked = !drawerToggle.checked;
+          drawerToggle.dispatchEvent(new Event("change", { bubbles: true }));
+        });
+        drawerToggle.addEventListener("change", syncDrawerAccessibility);
+        mobileQuery.addEventListener("change", syncDrawerAccessibility);
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && drawerToggle.checked) {
+            drawerToggle.checked = false;
+            drawerToggle.dispatchEvent(new Event("change"));
+            drawerButton.focus();
+          }
+        });
+        syncDrawerAccessibility();
+      }
+
+      const paletteControls = document.querySelector('[data-md-component="palette"]');
+      if (paletteControls) {
+        paletteControls.hidden = true;
+        paletteControls.setAttribute("inert", "");
+        paletteControls.querySelectorAll("input, button, select, textarea, a[href]").forEach(function (control) {
+          control.setAttribute("tabindex", "-1");
+        });
+      }
+
+      const searchToggle = document.getElementById("__search");
+      const searchLabel = document.querySelector('.md-header__button[for="__search"]');
+      const searchDialog = document.querySelector('.md-search[role="dialog"]');
+      const searchButton = labelToButton(searchLabel);
+
+      if (searchDialog && !searchDialog.hasAttribute("aria-label")) {
+        searchDialog.setAttribute("aria-label", "Site search");
+      }
+
+      function syncSearchAccessibility() {
+        if (!searchToggle || !searchButton || !searchDialog) return;
+        const isMobile = mobileQuery.matches;
+        syncMobileOnlyControl(searchButton, isMobile);
+        if (!isMobile && searchToggle.checked) searchToggle.checked = false;
+        const isOpen = isMobile && searchToggle.checked;
+        searchButton.setAttribute("aria-expanded", String(isOpen));
+        searchDialog.setAttribute("aria-hidden", String(isMobile && !isOpen));
+        if (!isMobile) {
+          searchDialog.removeAttribute("inert");
+          return;
+        }
+        if (isOpen) {
+          searchDialog.removeAttribute("inert");
+        } else {
+          searchDialog.setAttribute("inert", "");
+        }
+      }
+
+      function focusMobileSearchInput() {
+        function focusInput() {
+          if (!mobileQuery.matches || !searchToggle.checked) return;
+          const searchInput = searchDialog.querySelector(".md-search__input");
+          if (searchInput) searchInput.focus();
+        }
+        requestAnimationFrame(function () {
+          requestAnimationFrame(focusInput);
+        });
+        setTimeout(focusInput, 50);
+      }
+
+      function syncPageAccessibility() {
+        const skipLink = document.querySelector(".md-skip");
+        const contentStart = document.getElementById("main-content");
+        if (skipLink && contentStart) {
+          skipLink.setAttribute("href", "#main-content");
+        }
+      }
+
+      if (searchToggle && searchButton && searchDialog) {
+        if (!searchDialog.id) searchDialog.id = "site-search";
+        searchButton.setAttribute("aria-label", "Search");
+        searchButton.setAttribute("aria-controls", searchDialog.id);
+        searchButton.setAttribute("aria-haspopup", "dialog");
+        searchButton.addEventListener("click", function () {
+          if (!mobileQuery.matches) return;
+          searchToggle.checked = true;
+          syncSearchAccessibility();
+          searchToggle.dispatchEvent(new Event("change", { bubbles: true }));
+          focusMobileSearchInput();
+        });
+        searchToggle.addEventListener("change", syncSearchAccessibility);
+        mobileQuery.addEventListener("change", syncSearchAccessibility);
+        document.addEventListener("keydown", function (event) {
+          const eventStartedInSearch = searchDialog.contains(event.target);
+          if (!mobileQuery.matches || (!searchToggle.checked && !eventStartedInSearch)) return;
+
+          if (event.key === "Escape") {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            searchToggle.checked = false;
+            syncSearchAccessibility();
+            searchToggle.dispatchEvent(new Event("change", { bubbles: true }));
+            searchButton.focus();
+            return;
+          }
+
+          if (event.key !== "Tab") return;
+          const focusable = Array.from(searchDialog.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          )).filter(function (element) {
+            return !element.closest("[inert]") && !element.hidden && element.getClientRects().length > 0;
+          });
+          if (!focusable.length) {
+            event.preventDefault();
+            return;
+          }
+
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          const active = eventStartedInSearch ? event.target : document.activeElement;
+          if (event.shiftKey && (active === first || !searchDialog.contains(active))) {
+            event.preventDefault();
+            event.stopPropagation();
+            last.focus();
+          } else if (!event.shiftKey && (active === last || !searchDialog.contains(active))) {
+            event.preventDefault();
+            event.stopPropagation();
+            first.focus();
+          }
+        }, true);
+        syncSearchAccessibility();
+      }
+
+      syncPageAccessibility();
+
+      if (typeof document$ !== "undefined") {
+        document$.subscribe(function () {
+          syncDrawerAccessibility();
+          syncSearchAccessibility();
+          syncPageAccessibility();
+        });
+      }
+    });
+  </script>
+{% endblock %}
