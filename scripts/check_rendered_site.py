@@ -118,6 +118,7 @@ for source, document in documents.items():
 excluded_organisation = "sca" + "nia"
 stale_public_assets = (
     "assets/cv/zibo-liu-cv_2026-03-21.pdf",
+    "assets/cv/zibo-liu-full-academic-cv.pdf",
     "assets/application-pathways.svg",
     "assets/smile-system-map.svg",
     "assets/technology-roadmap.svg",
@@ -130,10 +131,7 @@ for relative in stale_public_assets:
     if (SITE / relative).exists():
         errors.append(f"stale public asset remains: {relative}")
 
-for relative, minimum in (
-    ("assets/cv/zibo-liu-public-cv-2026-10.pdf", 10_000),
-    ("assets/cv/zibo-liu-full-academic-cv.pdf", 40_000),
-):
+for relative, minimum in (("assets/cv/zibo-liu-public-cv-2026-10.pdf", 10_000),):
     public_cv = SITE / relative
     if not public_cv.is_file() or public_cv.stat().st_size < minimum:
         errors.append(f"public CV PDF is missing or unexpectedly small: {relative}")

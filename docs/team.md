@@ -8,7 +8,7 @@
 
 Zibo drives and leads the Swedish Research Council-funded SMILE project at KTH. He sets its direction, coordinates the research programme, and connects physical acoustics, acoustic metamaterials, computational design, and human-centred soundscape engineering. He receives support from collaborators and researchers who contribute complementary expertise to the project.
 
-[Full academic CV (PDF)](assets/cv/zibo-liu-full-academic-cv.pdf) · [One-page profile (PDF)](assets/cv/zibo-liu-public-cv-2026-10.pdf) · [KTH profile](https://www.kth.se/profile/zibo?l=en) · [Google Scholar](https://scholar.google.com/citations?user=OZhmCYwAAAAJ&hl=en) · [ORCID](https://orcid.org/0000-0002-7547-6535)
+[One-page profile (PDF)](assets/cv/zibo-liu-public-cv-2026-10.pdf) · [KTH profile](https://www.kth.se/profile/zibo?l=en) · [Google Scholar](https://scholar.google.com/citations?user=OZhmCYwAAAAJ&hl=en) · [ORCID](https://orcid.org/0000-0002-7547-6535)
 
 ## Collaborators and researchers
 

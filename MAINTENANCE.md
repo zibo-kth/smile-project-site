@@ -1,21 +1,13 @@
 # SMILE website maintenance
 
-## Full public academic CV
+## Public profile
 
-The stable public file is `docs/assets/cv/zibo-liu-full-academic-cv.pdf`.
+The website publishes only the one-page profile at
+`docs/assets/cv/zibo-liu-public-cv-2026-10.pdf`. Its editable source is
+`cv/zibo-liu-public-cv.html`.
 
-- Edit public academic content in `cv/zibo-liu-full-academic-cv.template.html`.
-- Bibliometric values and the public update date live in `cv/public-cv-data.json`.
-- Import current metrics from the private canonical CV and rebuild locally:
-
-  ```bash
-  .venv/bin/python scripts/build_public_cv.py --from-canonical --write --pdf --check
-  ```
-
-- When the template changes but metrics do not, add `--touch` to update the public date.
-- The public version must omit private contact details, confidential or internal project material, and unpublished intellectual property. Only granted patents are listed.
-
-PDF rendering uses the installed Windows Chrome on this WSL host. CI validates the committed generated HTML and PDF but does not regenerate the binary.
+The full academic CV is intentionally not published on this website. Do not add,
+generate, link, or deploy a full-CV PDF from this repository.
 
 ## Related-research watch
 

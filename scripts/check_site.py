@@ -48,18 +48,13 @@ for identity in (swedish_title, "SMILE-乐景工程"):
         fail(f"project identity is missing from the home page: {identity}")
 
 one_page_cv = DOCS / "assets" / "cv" / "zibo-liu-public-cv-2026-10.pdf"
-full_cv = DOCS / "assets" / "cv" / "zibo-liu-full-academic-cv.pdf"
 one_page_cv_source = ROOT / "cv" / "zibo-liu-public-cv.html"
-for path, minimum in ((one_page_cv, 10_000), (full_cv, 40_000)):
-    if not path.is_file() or path.stat().st_size < minimum:
-        fail(f"public CV PDF is missing or unexpectedly small: {path.relative_to(ROOT)}")
+if not one_page_cv.is_file() or one_page_cv.stat().st_size < 10_000:
+    fail(f"public profile PDF is missing or unexpectedly small: {one_page_cv.relative_to(ROOT)}")
 if not one_page_cv_source.is_file():
-    fail("one-page public CV source is missing")
+    fail("one-page public profile source is missing")
 
-for command in (
-    [sys.executable, str(ROOT / "scripts" / "build_public_cv.py"), "--check"],
-    [sys.executable, str(ROOT / "scripts" / "render_related_research.py")],
-):
+for command in ([sys.executable, str(ROOT / "scripts" / "render_related_research.py")],):
     result = subprocess.run(command, cwd=ROOT)
     if result.returncode:
         fail(f"validation command failed: {' '.join(command[1:])}")
@@ -122,12 +117,17 @@ for path in published_inputs:
 
 for relative in (
     "diagram-sources/smile-diagrams.html",
+    "cv/public-cv-data.json",
+    "cv/zibo-liu-full-academic-cv.html",
+    "cv/zibo-liu-full-academic-cv.template.html",
+    "docs/assets/cv/zibo-liu-full-academic-cv.pdf",
     "docs/assets/application-pathways.svg",
     "docs/assets/smile-system-map.svg",
     "docs/assets/technology-roadmap.svg",
+    "scripts/build_public_cv.py",
 ):
     if (ROOT / relative).exists():
-        fail(f"over-detailed public research asset remains: {relative}")
+        fail(f"retired public asset or generator remains: {relative}")
 
 for svg in sorted((DOCS / "assets").glob("*.svg")):
     try:
