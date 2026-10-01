@@ -101,6 +101,7 @@ def print_pdf() -> None:
             fail(f"Chrome PDF rendering failed: {result.stderr.strip()}")
         PDF.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(output, PDF)
+        PDF.chmod(0o644)
 
 
 def main() -> None:
