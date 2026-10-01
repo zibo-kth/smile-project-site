@@ -1,0 +1,45 @@
+{
+  "reviewed_at": "2026-10-01",
+  "items": [
+    {
+      "id": "arxiv:2609.39028",
+      "title": "Better scores do not always mean better perceived sound",
+      "date": "2026-09-30",
+      "status": "Preprint",
+      "topic": "Perception and evaluation",
+      "summary": "Optimising several learned mean-opinion-score predictors raised their scores, but a MUSHRA listening test found no improvement in perceived speech quality. It is a timely reminder that human listening must remain part of acoustic-system evaluation.",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2609.39028"
+    },
+    {
+      "id": "arxiv:2609.08102",
+      "title": "Neural operators for faster metamaterial simulations",
+      "date": "2026-09-08",
+      "status": "Preprint",
+      "topic": "Computational acoustics",
+      "summary": "Wavelet-encoded Fourier neural operators learned multiple elastic-wave eigenmodes across metamaterial geometries. The authors report that the trained model greatly accelerated the simulation stage relative to finite-element analysis, pointing to new possibilities for design exploration.",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2609.08102"
+    },
+    {
+      "id": "doi:10.1038/s44384-026-00066-5",
+      "title": "Designing sound installations around acoustic niches",
+      "date": "2026-09-02",
+      "status": "Peer reviewed",
+      "topic": "Soundscape design",
+      "summary": "A laboratory study of a proposed Paris sound installation found that its perceptual effect depended strongly on the time context. Reactive composition strategies may therefore need to differ between traffic-dominated and quieter conditions.",
+      "source": "npj Acoustics",
+      "url": "https://www.nature.com/articles/s44384-026-00066-5"
+    },
+    {
+      "id": "kth:1.1496985",
+      "title": "KTH upgrades its sound and vibration laboratory",
+      "date": "2026-09-23",
+      "status": "Research news",
+      "topic": "Research infrastructure",
+      "summary": "KTH is modernising the Marcus Wallenberg Laboratory with a modular anechoic chamber and a larger reverberation room, expanding capacity for absorption, transmission, sound-generation, and noise-control measurements.",
+      "source": "KTH",
+      "url": "https://www.kth.se/en/sci/nyheter/marcus-wallenberg-laboratoriet-utvecklas-for-framtiden-1.1496985"
+    }
+  ]
+}

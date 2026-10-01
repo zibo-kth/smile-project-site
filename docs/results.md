@@ -6,6 +6,8 @@ This page collects public project outputs after scientific review and any necess
 
 SMILE began in 2026. Publications, software, datasets, and demonstrators will be listed here when they are ready for public release.
 
+New work appears here only after the appropriate scientific, ethical, licensing, and collaboration checks. For a regularly refreshed view of independent work relevant to the project, see [Around the field](news.md#around-the-field).
+
 ## Related research
 
 **The influence of visual context on truck cabin soundscape perception**<br>

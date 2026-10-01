@@ -30,6 +30,69 @@
   color: #a7a7a7;
 }
 
+.feature-grid,
+.update-grid,
+.research-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1rem 0 1.4rem;
+}
+
+.feature-grid article,
+.update-grid article,
+.research-grid article {
+  background: linear-gradient(145deg, #f7f9fc 0%, #ffffff 100%);
+  border: 1px solid #dce4ed;
+  border-radius: 0.55rem;
+  box-shadow: 0 0.18rem 0.65rem rgba(22, 46, 75, 0.07);
+  padding: 1rem 1.05rem;
+}
+
+.feature-grid article {
+  border-top: 0.22rem solid #315f9c;
+}
+
+.feature-grid h3,
+.research-grid h3 {
+  margin-top: 0;
+}
+
+.update-grid article > :first-child,
+.research-grid article > :first-child {
+  margin-top: 0;
+}
+
+.update-grid article > :last-child,
+.research-grid article > :last-child {
+  margin-bottom: 0;
+}
+
+.research-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.research-meta {
+  color: #4e6075;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.review-note {
+  color: #4e6075;
+  font-size: 0.86rem;
+}
+
+@media screen and (max-width: 47.984375em) {
+  .feature-grid,
+  .update-grid,
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Keep Material's mobile search backdrop inside the viewport while it fades. */
 @media screen and (max-width: 59.984375em) {
   [dir] .md-search__overlay {

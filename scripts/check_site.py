@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import re
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
@@ -46,16 +47,49 @@ for identity in (swedish_title, "SMILE-乐景工程"):
     if identity not in home:
         fail(f"project identity is missing from the home page: {identity}")
 
-public_cv = DOCS / "assets" / "cv" / "zibo-liu-public-cv-2026-10.pdf"
-public_cv_source = ROOT / "cv" / "zibo-liu-public-cv.html"
-if not public_cv.is_file() or public_cv.stat().st_size < 10_000:
-    fail("sanitised public CV PDF is missing or unexpectedly small")
-if not public_cv_source.is_file():
-    fail("public CV source is missing")
+one_page_cv = DOCS / "assets" / "cv" / "zibo-liu-public-cv-2026-10.pdf"
+full_cv = DOCS / "assets" / "cv" / "zibo-liu-full-academic-cv.pdf"
+one_page_cv_source = ROOT / "cv" / "zibo-liu-public-cv.html"
+for path, minimum in ((one_page_cv, 10_000), (full_cv, 40_000)):
+    if not path.is_file() or path.stat().st_size < minimum:
+        fail(f"public CV PDF is missing or unexpectedly small: {path.relative_to(ROOT)}")
+if not one_page_cv_source.is_file():
+    fail("one-page public CV source is missing")
+
+for command in (
+    [sys.executable, str(ROOT / "scripts" / "build_public_cv.py"), "--check"],
+    [sys.executable, str(ROOT / "scripts" / "render_related_research.py")],
+):
+    result = subprocess.run(command, cwd=ROOT)
+    if result.returncode:
+        fail(f"validation command failed: {' '.join(command[1:])}")
 
 public_words = re.findall(r"\b[\w’'-]+\b", markdown)
-if len(public_words) > 1_600:
-    fail(f"public page copy is too detailed ({len(public_words)} words; limit 1600)")
+if len(public_words) > 2_600:
+    fail(f"public page copy is too detailed ({len(public_words)} words; limit 2600)")
+
+team = (DOCS / "team.md").read_text(encoding="utf-8")
+for wording in (
+    "drives and leads the Swedish Research Council-funded SMILE project",
+    "Collaborators and researchers",
+    "project network, not a single reporting line",
+):
+    if wording not in team:
+        fail(f"project leadership or collaboration wording is missing: {wording}")
+for wrong_wording in ("my research team", "Participating Researchers"):
+    if wrong_wording.lower() in team.lower():
+        fail(f"misleading team wording remains: {wrong_wording}")
+
+news = (DOCS / "news.md").read_text(encoding="utf-8")
+for public_update in (
+    "1 June 2026",
+    "KTH–UCL workshop",
+    "SMILE City: A Pre-study",
+    "incoming postdoctoral researcher",
+    "Around the field",
+):
+    if public_update.lower() not in news.lower():
+        fail(f"requested public update is missing: {public_update}")
 
 results = (DOCS / "results.md").read_text(encoding="utf-8")
 correct_authors = (
@@ -73,7 +107,8 @@ for fact in ("2025-06253", "1 January 2026", "31 December 2029"):
         fail(f"verified funding fact is missing: {fact}")
 
 excluded_organisation = "sca" + "nia"
-published_inputs = [ROOT / "mkdocs.yml", public_cv_source]
+published_inputs = [ROOT / "mkdocs.yml"]
+published_inputs.extend((ROOT / "cv").glob("*.html"))
 published_inputs.extend(path for path in DOCS.rglob("*") if path.is_file())
 text_suffixes = {".css", ".html", ".js", ".md", ".svg", ".txt", ".yaml", ".yml"}
 for path in published_inputs:

@@ -130,9 +130,13 @@ for relative in stale_public_assets:
     if (SITE / relative).exists():
         errors.append(f"stale public asset remains: {relative}")
 
-public_cv = SITE / "assets/cv/zibo-liu-public-cv-2026-10.pdf"
-if not public_cv.is_file() or public_cv.stat().st_size < 10_000:
-    errors.append("sanitised public CV PDF is missing or unexpectedly small")
+for relative, minimum in (
+    ("assets/cv/zibo-liu-public-cv-2026-10.pdf", 10_000),
+    ("assets/cv/zibo-liu-full-academic-cv.pdf", 40_000),
+):
+    public_cv = SITE / relative
+    if not public_cv.is_file() or public_cv.stat().st_size < minimum:
+        errors.append(f"public CV PDF is missing or unexpectedly small: {relative}")
 
 for public_file in SITE.rglob("*"):
     if not public_file.is_file():
