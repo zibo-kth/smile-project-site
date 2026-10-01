@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -39,6 +40,23 @@ for placeholder in ("(To be added)", "will be populated", "WP structure (draft)"
     if placeholder.lower() in markdown.lower():
         fail(f"public placeholder remains: {placeholder}")
 
+swedish_title = "SMILE: Ljudlandskapsutformning med Metamaterialinnovation och Lärande"
+home = (DOCS / "index.md").read_text(encoding="utf-8")
+for identity in (swedish_title, "SMILE-乐景工程"):
+    if identity not in home:
+        fail(f"project identity is missing from the home page: {identity}")
+
+public_cv = DOCS / "assets" / "cv" / "zibo-liu-public-cv-2026-10.pdf"
+public_cv_source = ROOT / "cv" / "zibo-liu-public-cv.html"
+if not public_cv.is_file() or public_cv.stat().st_size < 10_000:
+    fail("sanitised public CV PDF is missing or unexpectedly small")
+if not public_cv_source.is_file():
+    fail("public CV source is missing")
+
+public_words = re.findall(r"\b[\w’'-]+\b", markdown)
+if len(public_words) > 1_600:
+    fail(f"public page copy is too detailed ({len(public_words)} words; limit 1600)")
+
 results = (DOCS / "results.md").read_text(encoding="utf-8")
 correct_authors = (
     "Zibo Liu, Tin Oberman, Xiang Fang, Naveen Indolia, "
@@ -50,9 +68,31 @@ if "Andrew Mitchell" in results:
     fail("incorrect author Andrew Mitchell remains in the preprint record")
 
 funding = (DOCS / "funding.md").read_text(encoding="utf-8")
-for fact in ("2025-06253", "SEK 3,500,000", "1 January 2026", "31 December 2029"):
+for fact in ("2025-06253", "1 January 2026", "31 December 2029"):
     if fact not in funding:
         fail(f"verified funding fact is missing: {fact}")
+
+excluded_organisation = "sca" + "nia"
+published_inputs = [ROOT / "mkdocs.yml", public_cv_source]
+published_inputs.extend(path for path in DOCS.rglob("*") if path.is_file())
+text_suffixes = {".css", ".html", ".js", ".md", ".svg", ".txt", ".yaml", ".yml"}
+for path in published_inputs:
+    relative = path.relative_to(ROOT)
+    if excluded_organisation in str(relative).lower():
+        fail(f"excluded organisation remains in a public path: {relative}")
+    if path.suffix.lower() in text_suffixes:
+        content = path.read_text(encoding="utf-8")
+        if excluded_organisation in content.lower():
+            fail(f"excluded organisation remains in public content: {relative}")
+
+for relative in (
+    "diagram-sources/smile-diagrams.html",
+    "docs/assets/application-pathways.svg",
+    "docs/assets/smile-system-map.svg",
+    "docs/assets/technology-roadmap.svg",
+):
+    if (ROOT / relative).exists():
+        fail(f"over-detailed public research asset remains: {relative}")
 
 for svg in sorted((DOCS / "assets").glob("*.svg")):
     try:

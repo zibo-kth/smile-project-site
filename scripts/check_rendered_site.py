@@ -115,8 +115,13 @@ for source, document in documents.items():
                     f"{source.relative_to(SITE)} has missing fragment '{fragment}' in {target.relative_to(SITE)}"
                 )
 
+excluded_organisation = "sca" + "nia"
 stale_public_assets = (
     "assets/cv/zibo-liu-cv_2026-03-21.pdf",
+    "assets/application-pathways.svg",
+    "assets/smile-system-map.svg",
+    "assets/technology-roadmap.svg",
+    f"assets/logos/{excluded_organisation}.jpg",
     "assets/smile-inverse-loop.svg",
     "assets/indoor-truck-cabin-concept.svg",
     "assets/outdoor-luma-park-concept.svg",
@@ -125,12 +130,27 @@ for relative in stale_public_assets:
     if (SITE / relative).exists():
         errors.append(f"stale public asset remains: {relative}")
 
+public_cv = SITE / "assets/cv/zibo-liu-public-cv-2026-10.pdf"
+if not public_cv.is_file() or public_cv.stat().st_size < 10_000:
+    errors.append("sanitised public CV PDF is missing or unexpectedly small")
+
+for public_file in SITE.rglob("*"):
+    if not public_file.is_file():
+        continue
+    relative = public_file.relative_to(SITE)
+    if excluded_organisation in str(relative).lower():
+        errors.append(f"excluded organisation remains in a public path: {relative}")
+    if public_file.suffix.lower() in {".html", ".json", ".svg", ".txt", ".xml"}:
+        content = public_file.read_text(encoding="utf-8")
+        if excluded_organisation in content.lower():
+            errors.append(f"excluded organisation remains in public content: {relative}")
+
 home = documents.get((SITE / "index.html").resolve())
 if home is None:
     errors.append("home page was not generated")
 else:
     title = "".join(home.title_parts).strip()
-    if title in {"SMILE - SMILE", "Home - SMILE"}:
+    if title in {"SMILE - SMILE", "Home - SMILE", "SMILE Project - SMILE Project"}:
         errors.append(f"home page has generic title: {title}")
 
 if errors:

@@ -1,0 +1,18 @@
+SMILE Chinese project-name font subset
+======================================
+
+noto-sans-sc-smile-subset.woff2 is a self-hosted subset of Noto Sans SC for
+the four Chinese characters in the SMILE project name (乐景工程). It contains
+U+4E50, U+5DE5, U+666F, U+7A0B, and U+0020 only.
+
+The subset was obtained from the official Google Fonts CSS API using the
+text=乐景工程 parameter. The upstream source is:
+https://github.com/notofonts/noto-cjk
+
+Google Fonts references upstream commit:
+523d033d6cb47f4a80c58a35753646f5c3608a78
+
+Font copyright: Copyright 2014–2021 Adobe, with Reserved Font Name "Source".
+License: SIL Open Font License 1.1; see OFL-NotoSansSC.txt.
+Subset SHA-256:
+3c9b97b4d00daa5ac6ee0bb9caac034b10afa34d004a65f948d66a1f4730dbc9

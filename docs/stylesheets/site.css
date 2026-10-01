@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "SMILE Chinese Subset";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/noto-sans-sc-smile-subset.woff2") format("woff2");
+  unicode-range: U+4E50, U+5DE5, U+666F, U+7A0B;
+}
+
+.project-name-cjk {
+  font-family: "SMILE Chinese Subset", sans-serif;
+}
+
+.md-typeset {
+  overflow-wrap: anywhere;
+}
+
+.md-typeset img {
+  height: auto;
+  max-width: 100%;
+}
+
+.md-typeset a {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.md-copyright,
+.md-copyright a {
+  color: #a7a7a7;
+}
+
+/* Keep Material's mobile search backdrop inside the viewport while it fades. */
+@media screen and (max-width: 59.984375em) {
+  [dir] .md-search__overlay {
+    border-radius: 0;
+    height: 100vh;
+    height: 100dvh;
+    inset: 0;
+    position: fixed;
+    transform: none;
+    transition: opacity 0.2s;
+    width: 100vw;
+  }
+
+  [data-md-toggle="search"]:checked ~ .md-header .md-search__overlay {
+    transform: none;
+  }
+}
