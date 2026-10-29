@@ -1,9 +1,9 @@
 {
-  "reviewed_at": "2026-10-15",
+  "reviewed_at": "2026-10-29",
   "items": [
     {
       "id": "doi:10.1038/s44384-026-00073-6",
-      "title": "Traffic speed and acoustic context shape urban soundscape perception",
+      "title": "Influence of traffic speed and acoustic environment on perception and perceived workload in virtual reality",
       "date": "2026-10-06",
       "status": "Peer reviewed",
       "topic": "Perception and evaluation",
@@ -13,7 +13,7 @@
     },
     {
       "id": "doi:10.1038/s44384-026-00072-7",
-      "title": "Natural soundscaping shows short-lived physiological benefits",
+      "title": "The positive impact of naturally soundscaping a noisy urban space on same-night sleep in working adults",
       "date": "2026-10-06",
       "status": "Peer reviewed",
       "topic": "Soundscape design",
@@ -22,24 +22,24 @@
       "url": "https://www.nature.com/articles/s44384-026-00072-7"
     },
     {
-      "id": "doi:10.1038/s41467-026-77579-w",
-      "title": "Symmetry breaking creates directional acoustic interface states",
-      "date": "2026-09-08",
+      "id": "doi:10.1038/s41467-026-78506-9",
+      "title": "Absorbing exceptional point of coherent vortex beams",
+      "date": "2026-10-15",
       "status": "Peer reviewed",
       "topic": "Acoustic metamaterials",
-      "summary": "An acoustic metagrating experiment realised a Jackiw–Rebbi interface state produced by spontaneous symmetry breaking. The reported surface propagation combined a constant phase jump with highly directional radiation, illustrating a route to robust wavefront control in acoustic devices.",
+      "summary": "Experiments with acoustic vortex beams and symmetry-tailored metasurfaces realised chiral coherent-perfect-absorption exceptional points. Rotating the metasurface switched absorption capacity and degenerate states, while the vortex beams’ orbital-angular-momentum channels increased channel capacity and enabled sensitivity alongside robust perfect absorption.",
       "source": "Nature Communications",
-      "url": "https://www.nature.com/articles/s41467-026-77579-w"
+      "url": "https://www.nature.com/articles/s41467-026-78506-9"
     },
     {
-      "id": "kth:1.1496985",
-      "title": "KTH upgrades its sound and vibration laboratory",
-      "date": "2026-09-23",
-      "status": "Research news",
-      "topic": "Research infrastructure",
-      "summary": "KTH is modernising the Marcus Wallenberg Laboratory with a modular anechoic chamber and a larger reverberation room, expanding capacity for absorption, transmission, sound-generation, and noise-control measurements.",
-      "source": "KTH",
-      "url": "https://www.kth.se/en/sci/nyheter/marcus-wallenberg-laboratoriet-utvecklas-for-framtiden-1.1496985"
+      "id": "doi:10.1038/s41524-026-02349-7",
+      "title": "Large language model-driven inverse design of acoustic valley-Hall insulators",
+      "date": "2026-09-30",
+      "status": "Peer reviewed",
+      "topic": "Inverse design",
+      "summary": "A two-agent framework couples a fine-tuned designer model with a manager that handles task planning, simulation calls, and multimodal outputs. Given concise bandgap requirements, it generates candidate acoustic valley-Hall structures, verifies their numerical response, and produces band structures, eigenmode fields, and manufacturable model files.",
+      "source": "npj Computational Materials",
+      "url": "https://www.nature.com/articles/s41524-026-02349-7"
     }
   ]
 }
